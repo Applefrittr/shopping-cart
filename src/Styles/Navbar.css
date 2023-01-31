@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    color: white;
+    background-color: navy;
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    align-items: center;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+}
+
+li {
+    padding: 2rem 0;
+}
+
+li:hover {
+    background-color: blue;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 2rem;
+}
+
+.active {
+    background-color: blue;
+}
+
+#open-cart {
+    padding: 2rem;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .2);
+    justify-content: flex-end;
+}
+
+.display {
+    display:flex;
+}
