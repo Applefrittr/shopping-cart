@@ -52,8 +52,13 @@ a {
     height: 100vh;
     background-color: rgba(0, 0, 0, .2);
     justify-content: flex-end;
+    overflow: scroll;
 }
 
 .display {
     display:flex;
+}
+
+.modal-open {
+    overflow: hidden;
 }

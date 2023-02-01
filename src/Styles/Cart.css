@@ -4,3 +4,8 @@
     background: white;
     color: black;
 }
+
+.basket-item-count {
+    display: flex;
+    gap: 1rem;
+}
