@@ -7,8 +7,11 @@ const Navbar = (props) => {
   // Hook useRef to target div.modal of the Navbar component, which we can then toggle the display using the displayCart method
   const ref = useRef();
 
-  // Nvabar state cartCount is the number of items currently in the shooping cart
+  // Navbar state cartCount is the number of items currently in the shooping cart
   const [cartCount, setCartCount] = useState(0);
+
+  // Navbar state cartDisplay used to in Cart component to toggle display of the cart
+  const [cartDisplay, setCartDisplay] = useState(false);
 
   // fires setCartCount if the prop.cart changes, will render new cartCount in the Navbar
   useEffect(() => {
@@ -17,11 +20,16 @@ const Navbar = (props) => {
     setCartCount(count);
   }, [props.cart]);
 
-  // toggles the display of the shopping cart modal
+  // toggles the display of the shopping cart overlay.  SetTimeout used here bec. we want the div.modal container to display first, then the Cart component is faded in
+  // inside the div.  When Cart is closed, fade out the Cart component first then remove the div.modal container after 1 second
   const displayCart = () => {
-    console.log(props.cart);
-    ref.current.classList.toggle("display");
-    toggleBodyScroll();
+    if (!cartDisplay) {
+      ref.current.classList.toggle("display");
+      setTimeout(() => setCartDisplay(!cartDisplay), 0);
+    } else {
+      setCartDisplay(!cartDisplay);
+      setTimeout(() => ref.current.classList.toggle("display"), 1000);
+    }
   };
 
   return (
@@ -44,6 +52,7 @@ const Navbar = (props) => {
           display={displayCart}
           add={props.add}
           subtract={props.subtract}
+          cartDisplay={cartDisplay}
         />
       </div>
     </nav>
@@ -51,9 +60,3 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
-
-// Helper function to disable scroll when the cart modal is open.  Using browser DOM api since we are manipulating the body tag - not created by React
-const toggleBodyScroll = () => {
-  const body = document.querySelector("body");
-  body.classList.toggle("modal-open");
-};

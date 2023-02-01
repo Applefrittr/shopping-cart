@@ -48,9 +48,8 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 500px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, .2);
     justify-content: flex-end;
     overflow: scroll;
 }

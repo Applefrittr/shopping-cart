@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import AnimatePage from "./AnimatePage";
 
 const ProductPage = (props) => {
   // UseParams hook to access the URL name value passed by the <Route path="/shop/:name" ...> in Shop.js
@@ -12,7 +13,7 @@ const ProductPage = (props) => {
   }, [props.catalog, name]);
 
   return (
-    <div>
+    <AnimatePage>
       <h1>{product.name}</h1>
       <h2>{product.price}</h2>
       <Link to={"/catalog"}>
@@ -21,7 +22,7 @@ const ProductPage = (props) => {
       <button onClick={props.add} id={product.name}>
         Add
       </button>
-    </div>
+    </AnimatePage>
   );
 };
 

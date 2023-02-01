@@ -1,10 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import ProductPage from "./Components/ProductPage";
 import { useState } from "react";
 import Products from "./Objects/Products";
-import Catalog from "./Components/Catalog";
+import RoutePaths from "./Components/RoutePaths";
 
 // Our main Shop component using react router to enable client-side navigation between different pages of the shop
 const Shop = () => {
@@ -52,14 +50,17 @@ const Shop = () => {
   return (
     <BrowserRouter>
       <Navbar cart={cart} add={addCart} subtract={subtractCart} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog catalog={catalog} />} />
-        <Route
-          path="/catalog/:name"
-          element={<ProductPage add={addCart} catalog={catalog} />}
-        />
-      </Routes>
+      {/* <AnimatePresence exitBeforeEnter> 
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog catalog={catalog} />} />
+          <Route
+            path="/catalog/:name"
+            element={<ProductPage add={addCart} catalog={catalog} />}
+          />
+        </Routes>
+      </AnimatePresence>  */}
+      <RoutePaths catalog={catalog} add={addCart}/>
     </BrowserRouter>
   );
 };

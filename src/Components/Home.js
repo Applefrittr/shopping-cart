@@ -1,5 +1,12 @@
+import AnimatePage from "./AnimatePage";
+import "../Styles/Home.css"
+
 function Home() {
-  return <h1 className="Home">Hello World! - From Home Page</h1>;
+  return (
+    <AnimatePage>
+      <h1 className="home">Hello World! - From Home Page</h1>
+    </AnimatePage>
+  );
 }
 
 export default Home;
