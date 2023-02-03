@@ -2,6 +2,7 @@ import "../Styles/Navbar.css";
 import { NavLink } from "react-router-dom";
 import Cart from "./Cart";
 import { useEffect, useRef, useState } from "react";
+import Stripes from "../Assets/stripes.jpg"
 
 const Navbar = (props) => {
   // Hook useRef to target div.modal of the Navbar component, which we can then toggle the display using the displayCart method
@@ -34,13 +35,16 @@ const Navbar = (props) => {
 
   return (
     <nav>
-      <h1>Shop Name</h1>
+      <div className="nav-name">
+        <h1 id="logo">//</h1>
+        <h1><i>TURISMO DEALERSHIP</i></h1>
+      </div>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className="nav-links">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/catalog">Shop</NavLink>
+          <NavLink to="/catalog" className="nav-links">Shop</NavLink>
         </li>
         <li id="open-cart" onClick={displayCart}>
           Cart {cartCount}

@@ -1,7 +1,16 @@
+@font-face {
+    font-family: Helvetica-Neue;
+    src: url("../Assets/Fonts/Helvetica\ Neue\ 97\ Black\ Condensed.otf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
+
+/* body {
+    background-color: black;
+} */
 
 nav {
     color: white;
@@ -11,6 +20,24 @@ nav {
     font-size: large;
     align-items: center;
     position: relative;
+    font-family: Helvetica-Neue;
+    height: fit-content;
+}
+
+.nav-name {
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#logo {
+    color: red;
+}
+
+#logo img {
+    height: 85px;
+    width: 100px;
 }
 
 ul {
@@ -24,15 +51,14 @@ li {
     padding: 2rem 0;
 }
 
-li:hover {
-    background-color: blue;
-}
-
-a {
+.nav-links {
     color: white;
     text-decoration: none;
-    height: 100%;
-    padding: 2rem;
+    padding: 2.15rem;
+}
+
+.nav-links:hover {
+    background-color: blue;
 }
 
 .active {
@@ -41,6 +67,10 @@ a {
 
 #open-cart {
     padding: 2rem;
+}
+
+#open-cart:hover {
+    background-color: blue;
 }
 
 .modal {

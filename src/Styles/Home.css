@@ -1,4 +1,26 @@
+@font-face {
+    font-family: Helvetica-Neue;
+    src: url("../Assets/Fonts/Helvetica\ Neue\ 97\ Black\ Condensed.otf");
+}
+
 .home {
-    background-color: aqua;
-    height: 100vh;
+    background-image: url("../Assets/GranTurismoSplash.jpg");
+    background-size: cover;
+    height: 95vh;
+    color: white;
+    padding: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    font-family: Helvetica-Neue;
+}
+
+.store-name {
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.home-description {
+    font-size: 1.5rem;
 }

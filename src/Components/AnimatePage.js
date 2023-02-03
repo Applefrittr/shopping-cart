@@ -7,12 +7,6 @@ const AnimatePage = ({ children }) => {
     exit: { opacity: 0, x: -100 },
   };
 
-  const spring = {
-    type: "spring",
-    damping: 10,
-    stiffness: 100
-  }
-
   return (
     <motion.div
       variants={animation}
@@ -20,7 +14,7 @@ const AnimatePage = ({ children }) => {
       animate="animate"
       exit="exit"
       transition={{
-        duration: 0.5,
+        duration: 0.75,
         ease: [0, 0.71, 0.2, 1.01]
       }}
     >
