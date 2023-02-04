@@ -1,126 +1,317 @@
- import honda1 from "../Assets/hondaR1.jpeg"
- import honda2 from "../Assets/hondaR2.jpg"
- import nissan1 from "../Assets/nissan1.jpg"
- import nissan2 from "../Assets/nissan2.jpg"
- import mustang1 from "../Assets/mustang1.jpg"
- import mustang2 from "../Assets/mustang2.jpg"
- import brz1 from "../Assets/brz1.jpg"
- import brz2 from "../Assets/brz2.jpg"
- import gr861 from "../Assets/GR861.jpg"
- import gr862 from "../Assets/GR862.jpg"
- import charger1 from "../Assets/charger1.jpg"
- import charger2 from "../Assets/charger2.jpg"
- import murcielago1 from "../Assets/Murcielago1b.jpg"
- import murcielago2 from "../Assets/Murcielago2.jpg"
- import camaro1 from "../Assets/camaro1.jpg"
- import camaro2 from "../Assets/camaro2.jpg"
- import tributo1 from "../Assets/tributo1.jpg"
- import tributo2 from "../Assets/tributo2a.jpg"
- import cayman1 from "../Assets/cayman1.jpg"
- import cayman2 from "../Assets/cayman2.jpg"
- import bmw2 from "../Assets/bmw2.jpg"
- import bmw1 from "../Assets/bmw1.jpg"
- import giulia1 from "../Assets/giulia1.jpg"
- import giulia2 from "../Assets/giulia2.jpg"
- 
- const Products = [
-    {
-        name: "Honda Civic Type R",
-        price: 45000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: honda1,
-        img2: honda2
-    },
-    {
-        name: "Nissan Z Performance",
-        price: 50000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: nissan1,
-        img2: nissan2
-    },
-    {
-        name: "Ford Mustang GT",
-        price: 39000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: mustang1,
-        img2: mustang2
-    },
-    {
-        name: "Subaru BRZ",
-        price: 28000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: brz1,
-        img2: brz2
-    },
-    {
-        name: "Toyota GR86",
-        price: 28500.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: gr861,
-        img2: gr862
-    },
-    {
-        name: "Dodge Charger SRT",
-        price: 82000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: charger1,
-        img2: charger2
-    },
-    {
-        name: "Lamborghini Mercielago",
-        price: 295000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: murcielago1,
-        img2: murcielago2
-    },
-    {
-        name: "Chevorlet Camaro SS",
-        price: 42500.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: camaro1,
-        img2: camaro2
-    },
-    {
-        name: "Firarri F8 Tributo",
-        price: 325000.00,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: tributo1,
-        img2: tributo2
-    },
-    {
-        name: "Porche Cayman GT4",
-        price: 108000,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: cayman1,
-        img2: cayman2
-    },
-    {
-        name: "BMW M2 Competition",
-        price: 59000,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: bmw2,
-        img2: bmw1
-    },
-    {
-        name: "Alfa Romeo Giulia GTAm",
-        price: 59000,
-        id: Math.floor(Math.random() * 1000),
-        count: 1,
-        img1: giulia1,
-        img2: giulia2
-    },
-    
-]
+import honda1 from "../Assets/hondaR1.jpeg";
+import honda2 from "../Assets/hondaR2.jpg";
+import nissan1 from "../Assets/nissan1.jpg";
+import nissan2 from "../Assets/nissan2.jpg";
+import mustang1 from "../Assets/mustang1.jpg";
+import mustang2 from "../Assets/mustang2.jpg";
+import brz1 from "../Assets/brz1.jpg";
+import brz2 from "../Assets/brz2.jpg";
+import gr861 from "../Assets/GR861.jpg";
+import gr862 from "../Assets/GR862.jpg";
+import charger1 from "../Assets/charger1.jpg";
+import charger2 from "../Assets/charger2.jpg";
+import murcielago1 from "../Assets/Murcielago1b.jpg";
+import murcielago2 from "../Assets/Murcielago2.jpg";
+import camaro1 from "../Assets/camaro1.jpg";
+import camaro2 from "../Assets/camaro2.jpg";
+import tributo1 from "../Assets/tributo1.jpg";
+import tributo2 from "../Assets/tributo2a.jpg";
+import cayman1 from "../Assets/cayman1.jpg";
+import cayman2 from "../Assets/cayman2.jpg";
+import bmw2 from "../Assets/bmw2.jpg";
+import bmw1 from "../Assets/bmw1.jpg";
+import giulia1 from "../Assets/giulia1.jpg";
+import giulia2 from "../Assets/giulia2.jpg";
+import HONDA from "../Assets/Logos/Honda.jpg";
+import NISSAN from "../Assets/Logos/nissan.jpg";
+import FORD from "../Assets/Logos/Ford.jpg";
+import SUBARU from "../Assets/Logos/Subaru.jpg";
+import TOYOTA from "../Assets/Logos/Toyota.jpg";
+import DODGE from "../Assets/Logos/Dodge.jpg";
+import LAMBORGHINI from "../Assets/Logos/Lamborghini.jpg";
+import CHEVY from "../Assets/Logos/Chevy.jpg";
+import FERRARI from "../Assets/Logos/Ferrari.jpg";
+import PORSCHE from "../Assets/Logos/Porsche.jpg";
+import BMW from "../Assets/Logos/BMW.jpg";
+import ALFAROMEO from "../Assets/Logos/AlfaRomeo.jpg";
 
-export default Products
+const Products = [
+  {
+    name: "Honda Civic Type R",
+    price: 45000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: honda1,
+    img2: honda2,
+    logo: HONDA,
+    manufacturer: "Honda",
+    year: "2020 Roadcar",
+    country: "Japan",
+    aspiration: "Twin-Turbocharged",
+    displacement: "2.0 L",
+    enginetype: "K20C1",
+    power: "315 BHP",
+    torque: "310 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "3,020 lbs (1,370 kg)",
+    pwr: "9.59 lbs/HP",
+    length: "4560 mm (179.5 in)",
+    width: "1875 mm (73.8 in)",
+    height: "1435 mm (56.5 in)",
+  },
+  {
+    name: "Nissan Z Performance",
+    price: 50000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: nissan1,
+    img2: nissan2,
+    logo: NISSAN,
+    manufacturer: "Nissan",
+    year: "2023",
+    country: "Japan",
+    aspiration: "Twin-Turbocharged",
+    displacement: "3.0 L",
+    enginetype: "VR30DDTT",
+    power: "400 BHP",
+    torque: "350.7 lb-ft",
+    drivetrain: "Rear-wheel drive",
+    weight: "3,400 lbs (1,543 kg)",
+    pwr: "8.4 lbs/HP",
+    length: "4379 mm (172.4 in)",
+    width: "1844 mm (72.6 in)",
+    height: "1320.8 mm (52 in)",
+  },
+  {
+    name: "Ford Mustang GT",
+    price: 39000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: mustang1,
+    img2: mustang2,
+    logo: FORD,
+    manufacturer: "Ford",
+    year: "2015",
+    country: "USA",
+    aspiration: "Natural Aspiration",
+    displacement: "5.2 L",
+    enginetype: "Coyote V8",
+    power: "428 BHP",
+    torque: "400 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "3,705 lbs (1,681 kg)",
+    pwr: "8.5 lbs/HP",
+    length: "4783 mm (188.3 in)",
+    width: "1915 mm (75.4 in)",
+    height: "1382 mm (54.4 in)",
+  },
+  {
+    name: "Subaru BRZ S",
+    price: 28000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: brz1,
+    img2: brz2,
+    logo: SUBARU,
+    manufacturer: "Subaru",
+    year: "2015",
+    country: "Japan",
+    aspiration: "Natural Aspiration",
+    displacement: "2.0 L",
+    enginetype: "4U-GSE",
+    power: "198 BHP",
+    torque: "184 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "2,700 lbs (1,230 kg)",
+    pwr: "13.7 lbs/HP",
+    length: "4240 mm (166.93 in)",
+    width: "1775 mm (69.9 in)",
+    height: "1300 mm (51.2 in)",
+  },
+  {
+    name: "Toyota GR86",
+    price: 28500.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: gr861,
+    img2: gr862,
+    logo: TOYOTA,
+    manufacturer: "Toyota",
+    year: "2021",
+    country: "Japan",
+    aspiration: "Natural Aspiration",
+    displacement: "2.4 L",
+    enginetype: "FA24D H4",
+    power: "231 BHP",
+    torque: "184 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "2,800 lbs (1,270 kg)",
+    pwr: "12 lbs/HP",
+    length: "4256 mm (167.56 in)",
+    width: "1775 mm (69.9 in)",
+    height: "1310 mm (51.6 in)",
+  },
+  {
+    name: "Dodge Charger SRT",
+    price: 82000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: charger1,
+    img2: charger2,
+    logo: DODGE,
+    manufacturer: "Dodge",
+    year: "2015",
+    country: "USA",
+    aspiration: "Supercharged",
+    displacement: "6.2 L",
+    enginetype: "V8 Hemi Hellcat",
+    power: "797 BHP",
+    torque: "707 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "4,400 lbs (1,980 kg)",
+    pwr: "6.1 lbs/HP",
+    length: "5088 mm (200.3 in)",
+    width: "1885 mm (74.2 in)",
+    height: "1478 mm (58.2 in)",
+  },
+  {
+    name: "Lamborghini Mercielago",
+    price: 295000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: murcielago1,
+    img2: murcielago2,
+    logo: LAMBORGHINI,
+    manufacturer: "Lamborghini",
+    year: "2009",
+    country: "Italy",
+    aspiration: "Natural Aspiration",
+    displacement: "6.5 L",
+    enginetype: "Lamborghini V12",
+    power: "661 BHP",
+    torque: "487 lb-ft",
+    drivetrain: "Mid-engine, Four-wheel drive",
+    weight: "3,670 lbs (1,665 kg)",
+    pwr: "5.7 lbs/HP",
+    length: "4610 mm (181.5 in)",
+    width: "2058 mm (81 in)",
+    height: "1135 mm (44.7 in)",
+  },
+  {
+    name: "Chevrolet Camaro SS",
+    price: 42500.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: camaro1,
+    img2: camaro2,
+    logo: CHEVY,
+    manufacturer: "Chevrolet",
+    year: "2016",
+    country: "USA",
+    aspiration: "Natural Aspiration",
+    displacement: "6.2 L",
+    enginetype: "LT1",
+    power: "453 BHP",
+    torque: "455 lb-ft",
+    drivetrain: "Front-wheel drive",
+    weight: "3,960 lbs (1,672 kg)",
+    pwr: "8.1 lbs/HP",
+    length: "4783 mm (188.3 in)",
+    width: "1897 mm (74.7 in)",
+    height: "1349 mm (53.1 in)",
+  },
+  {
+    name: "Ferrari F8 Tributo",
+    price: 325000.0,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: tributo1,
+    img2: tributo2,
+    logo: FERRARI,
+    manufacturer: "Ferrari",
+    year: "2019",
+    country: "Italy",
+    aspiration: "Twin-Turbocharged",
+    displacement: "3.9 L",
+    enginetype: "V8",
+    power: "710 BHP",
+    torque: "567 lb-ft",
+    drivetrain: "Mid-engine, Rear-wheel drive",
+    weight: "2,932 lbs (1,330 kg)",
+    pwr: "4.13 lbs/HP",
+    length: "4611 mm (181.54 in)",
+    width: "1979 mm (77.91 in)",
+    height: "1206 mm (47.48 in)",
+  },
+  {
+    name: "Porsche Cayman GT4",
+    price: 108000,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: cayman1,
+    img2: cayman2,
+    logo: PORSCHE,
+    manufacturer: "Porsche",
+    year: "2016",
+    country: "German",
+    aspiration: "Natural Aspiration",
+    displacement: "3.8 L",
+    enginetype: "Flat-six",
+    power: "379 BHP",
+    torque: "310.2 lb-ft",
+    drivetrain: "Mid-engine, Rear-wheel drive",
+    weight: "2,954 lbs (1,340 kg)",
+    pwr: "7.79 lbs/HP",
+    length: "4436 mm (174.6 in)",
+    width: "1817 mm (71.5 in)",
+    height: "1266 mm (49.8 in)",
+  },
+  {
+    name: "BMW M2 Competition",
+    price: 59000,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: bmw2,
+    img2: bmw1,
+    logo: BMW,
+    manufacturer: "BMW",
+    year: "2018",
+    country: "German",
+    aspiration: "Twin-Turbocharged",
+    displacement: "3.0 L",
+    enginetype: "Inline-six",
+    power: "405 BHP",
+    torque: "405.8 lb-ft",
+    drivetrain: "Rear-wheel drive",
+    weight: "3,472 lbs (1,575 kg)",
+    pwr: "8.57 lbs/HP",
+    length: "4,461 mm (175.6 in)",
+    width: "1,854 mm (73 in)",
+    height: "1,410 mm (55.5 in)",
+  },
+  {
+    name: "Alfa Romeo Giulia GTAm",
+    price: 211700,
+    id: Math.floor(Math.random() * 1000),
+    count: 1,
+    img1: giulia1,
+    img2: giulia2,
+    logo: ALFAROMEO,
+    manufacturer: "Alfa Romeo",
+    year: "2020",
+    country: "Italy",
+    aspiration: "Twin-Turbocharged",
+    displacement: "3.0 L",
+    enginetype: "V6",
+    power: "532 BHP",
+    torque: "442.6 lb-ft",
+    drivetrain: "Rear-wheel drive",
+    weight: "3,483 lbs (1,580",
+    pwr: "6.55 lbs/HP",
+    length: "4669 mm (183.9 in)",
+    width: "1923 mm (75.7 in)",
+    height: "1436 mm (56.5 in)",
+  },
+];
+
+export default Products;

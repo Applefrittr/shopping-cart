@@ -29,15 +29,14 @@ nav {
     display: flex;
     gap: 1rem;
     align-items: center;
+    position: relative;
 }
 
 #logo {
     color: red;
-}
-
-#logo img {
-    height: 85px;
-    width: 100px;
+    font-size: 162px;
+    position: absolute;
+    left: -100px;
 }
 
 ul {
@@ -48,13 +47,15 @@ ul {
 }
 
 li {
-    padding: 2rem 0;
+    display: block;
+    padding: 0;
 }
 
 .nav-links {
     color: white;
     text-decoration: none;
     padding: 2.15rem;
+    display: block;
 }
 
 .nav-links:hover {
@@ -66,7 +67,8 @@ li {
 }
 
 #open-cart {
-    padding: 2rem;
+    padding: 2.15rem;
+    display: block;
 }
 
 #open-cart:hover {

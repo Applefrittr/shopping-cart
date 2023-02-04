@@ -11,7 +11,7 @@
     padding: 15rem;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
     font-family: Helvetica-Neue;
 }

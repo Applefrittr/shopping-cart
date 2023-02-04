@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Products from "./Objects/Products";
 import RoutePaths from "./Components/RoutePaths";
 
@@ -47,19 +47,19 @@ const Shop = () => {
     }
   };
 
+  // Preload the image files for each product in catalog smoother UI experience.  Fires only on fist render of Shop :)
+  useEffect(() => {
+    catalog.forEach((item) => {
+      const img1 = new Image()
+      const img2 = new Image()
+      img1.src = item.img1
+      img2.src = item.img2
+    })
+  }, [])
+
   return (
     <BrowserRouter>
       <Navbar cart={cart} add={addCart} subtract={subtractCart} />
-      {/* <AnimatePresence exitBeforeEnter> 
-        <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog catalog={catalog} />} />
-          <Route
-            path="/catalog/:name"
-            element={<ProductPage add={addCart} catalog={catalog} />}
-          />
-        </Routes>
-      </AnimatePresence>  */}
       <RoutePaths catalog={catalog} add={addCart}/>
     </BrowserRouter>
   );
