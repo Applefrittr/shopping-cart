@@ -7,6 +7,8 @@ const Navbar = (props) => {
   // Hook useRef to target div.modal of the Navbar component, which we can then toggle the display using the displayCart method
   const ref = useRef();
 
+  const refCount = useRef()
+
   // Navbar state cartCount is the number of items currently in the shooping cart
   const [cartCount, setCartCount] = useState(0);
 
@@ -18,6 +20,8 @@ const Navbar = (props) => {
     let count = 0;
     props.cart.forEach((item) => (count = count + item.count));
     setCartCount(count);
+    if (count > 0) refCount.current.classList.add("count-display")
+    else refCount.current.classList.remove("count-display")
   }, [props.cart]);
 
   // toggles the display of the shopping cart overlay.  SetTimeout used here bec. we want the div.modal container to display first, then the Cart component is faded in
@@ -46,7 +50,7 @@ const Navbar = (props) => {
           <NavLink to="/catalog" className="nav-links">Shop</NavLink>
         </li>
         <li id="open-cart" onClick={displayCart}>
-          Cart {cartCount}
+          <span>Cart</span> <span className="count" ref={refCount}>{cartCount}</span>
         </li>
       </ul>
       <div className="modal" ref={ref}>

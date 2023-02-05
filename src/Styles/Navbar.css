@@ -69,10 +69,12 @@ li {
 #open-cart {
     padding: 2.15rem;
     display: block;
+    position: relative;
 }
 
 #open-cart:hover {
     background-color: blue;
+    cursor: pointer;
 }
 
 .modal {
@@ -92,4 +94,19 @@ li {
 
 .modal-open {
     overflow: hidden;
+}
+
+.count {
+    padding: .40rem .65rem;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    display: none;
+}
+
+.count-display {
+    display: block;
 }

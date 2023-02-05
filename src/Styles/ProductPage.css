@@ -16,6 +16,7 @@
     margin: auto;
     width: 80%;
     background-color: rgba(0, 0, 0, .8);
+    position: relative;
 }
 
 .info-container {
@@ -52,8 +53,40 @@
     font-size: 3rem;
 }
 
-
 .line-item {
     display: flex;
     justify-content: space-between;
 }
+
+#back-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#back-button {
+    border: none;
+    background-color: black;
+}
+
+#back-button:hover {
+    scale: 1.15;
+    cursor: pointer;
+}
+
+#back-button:active {
+    scale: .95;
+}
+
+.add-button {
+    font-family: Helvetica-Neue;
+    font-size: 1.15rem;
+    padding: 1rem;
+}
+/* 
+.add-button:active {
+    background-color: green;
+    border-radius: 5px;
+    padding: 1rem;
+    outline: solid green 1px;
+} */

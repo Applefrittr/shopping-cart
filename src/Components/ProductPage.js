@@ -1,8 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import AnimatePage from "./AnimatePage";
 import "../Styles/ProductPage.css";
 import { motion } from "framer-motion";
+import Back from "../Assets/back.png"
 
 const ProductPage = (props) => {
   // UseParams hook to access the URL name value passed by the <Route path="/shop/:name" ...> in Shop.js
@@ -20,10 +21,19 @@ const ProductPage = (props) => {
     exit: { opacity: 0, x: -100 },
   };
 
-  console.log(product)
+  const price = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
+  const usd = price.format(product.price);
+
   return (
     <AnimatePage>
-      <div className="product-page-container" style = {{backgroundImage: `url(${product.logo})`}} >
+      <div
+        className="product-page-container"
+        style={{ backgroundImage: `url(${product.logo})` }}
+      >
         <motion.div
           className="product-page"
           variants={animation}
@@ -114,15 +124,20 @@ const ProductPage = (props) => {
                   <span>{product.height}</span>
                 </div>
               </div>
-              <h2>{product.price}</h2>
-              <Link to={"/catalog"}>
-                <button>Back</button>
-              </Link>
-              <button onClick={props.add} id={product.name}>
-                Add
+              <div className="info-section">
+                <div className="line-item">
+                  <span>Price</span>
+                  <h1>{usd}</h1>
+                </div>
+              </div>
+              <button onClick={props.add} id={product.name} className="add-button">
+                Add to Cart
               </button>
             </div>
           </div>
+          <Link to={"/catalog"} id="back-container">
+            <button id="back-button"><img src={Back} alt="Back"></img></button>
+          </Link>
         </motion.div>
       </div>
     </AnimatePage>

@@ -3,6 +3,7 @@
     gap: 1rem;
     justify-content: center;
     padding: 3rem;
+    flex-wrap: wrap;
 }
 
 .products {
@@ -24,8 +25,8 @@
 }
 
 #side-bar {
-    width: 25%;
-    padding: 10rem 3rem;
+    width: 10%;
+    padding: 10rem 1rem;
     font-family: Helvetica-Neue;
     display: flex;
     flex-direction: column;

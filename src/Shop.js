@@ -15,6 +15,7 @@ const Shop = () => {
   // NavBar component (increment button)
   const addCart = (e) => {
     console.log(e.target.id);
+    console.group(e.target)
 
     const item = catalog.find((product) => e.target.id === product.name); // find the object in catalog with the matching event target id
 

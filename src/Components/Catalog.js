@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import "../Styles/Catalog.css";
 import { Link } from "react-router-dom";
 import AnimatePage from "./AnimatePage";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const Catalog = (props) => {
   const ref = useRef();
