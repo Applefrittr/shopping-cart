@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import AnimatePage from "./AnimatePage";
 import "../Styles/ProductPage.css";
 import { motion } from "framer-motion";
-import Back from "../Assets/back.png"
+import Back from "../Assets/Icons/back.png"
+import { convertUSD } from "../Shop";
 
 const ProductPage = (props) => {
   // UseParams hook to access the URL name value passed by the <Route path="/shop/:name" ...> in Shop.js
@@ -21,13 +22,10 @@ const ProductPage = (props) => {
     exit: { opacity: 0, x: -100 },
   };
 
-  const price = Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
+  const usd = convertUSD(product.price);
 
-  const usd = price.format(product.price);
-
+  // framer motion method "method" motion used twice here: once in the AnimatePage component wrapper and again on the .product-page container element.  Transitions 
+  // in the logo background of the product then after a short delay, transistions in the .product-page container with all product info and image
   return (
     <AnimatePage>
       <div

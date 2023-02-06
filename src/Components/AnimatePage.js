@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+// Component AnimatePage is a wrapper component which gives a smooth transition when Linking from one component to another
 const AnimatePage = ({ children }) => {
   const animation = {
     initial: { opacity: 0, x: 100 },

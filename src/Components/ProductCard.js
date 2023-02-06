@@ -1,13 +1,9 @@
 import "../Styles/ProductCard.css";
+import { convertUSD } from "../Shop.js"
 
 const ProductCard = (props) => {
   const product = props.product
-  const price = Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  })
-
-  const usd = price.format(product.price)
+  const usd = convertUSD(product.price)
 
   return (
     <div className="card-container">

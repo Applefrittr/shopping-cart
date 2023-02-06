@@ -1,3 +1,13 @@
+# Shopping Cart App created by Applefrittr
+
+A shopping cart app using the React library.  Employs the use of React Router to enable client side navigation between pages as well as Framer Motion for page transistions.  Theme based on the in-game store of Sony Interactive Entertainment's title [Grand Turismo](http://gran-turismo.com).
+
+All images and car information courtesy of the [Gran Turismo Wiki](https://gran-turismo.fandom.com/wiki/Gran_Turismo_Wiki).
+
+Live preview: https://applefrittr.github.io/shopping-cart/
+
+## React documentation below
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,6 +4,7 @@ import ProductPage from "./ProductPage";
 import Catalog from "./Catalog";
 import { AnimatePresence } from "framer-motion";
 
+// Wrapper for our routes to enable exit animations using framer motion
 const RoutePaths = (props) => {
   const location = useLocation();
 
