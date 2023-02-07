@@ -56,7 +56,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart">
       <Navbar cart={cart} add={addCart} subtract={subtractCart} />
       <RoutePaths catalog={catalog} add={addCart} />
     </BrowserRouter>
