@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.56522912.css",
-    "main.js": "/shopping-cart/static/js/main.e4799e13.js",
+    "main.js": "/shopping-cart/static/js/main.7156df4e.js",
     "static/media/mustang2.jpg": "/shopping-cart/static/media/mustang2.ded1ee1c2459d2ead927.jpg",
     "static/media/GranTurismoSplash.jpg": "/shopping-cart/static/media/GranTurismoSplash.68c506b9a6134340234a.jpg",
     "static/media/camaro1.jpg": "/shopping-cart/static/media/camaro1.9022c8f2317eb688131a.jpg",
@@ -42,10 +42,10 @@
     "static/media/Helvetica Neue 97 Black Condensed.otf": "/shopping-cart/static/media/Helvetica Neue 97 Black Condensed.e72c80a2ce99000a7c1b.otf",
     "index.html": "/shopping-cart/index.html",
     "main.56522912.css.map": "/shopping-cart/static/css/main.56522912.css.map",
-    "main.e4799e13.js.map": "/shopping-cart/static/js/main.e4799e13.js.map"
+    "main.7156df4e.js.map": "/shopping-cart/static/js/main.7156df4e.js.map"
   },
   "entrypoints": [
     "static/css/main.56522912.css",
-    "static/js/main.e4799e13.js"
+    "static/js/main.7156df4e.js"
   ]
 }
