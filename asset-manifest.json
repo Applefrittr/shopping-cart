@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.56522912.css",
-    "main.js": "/shopping-cart/static/js/main.e4799e13.js",
+    "main.css": "/shopping-cart/static/css/main.05d0fa2e.css",
+    "main.js": "/shopping-cart/static/js/main.eb4f3a39.js",
     "static/media/mustang2.jpg": "/shopping-cart/static/media/mustang2.ded1ee1c2459d2ead927.jpg",
     "static/media/GranTurismoSplash.jpg": "/shopping-cart/static/media/GranTurismoSplash.68c506b9a6134340234a.jpg",
     "static/media/camaro1.jpg": "/shopping-cart/static/media/camaro1.9022c8f2317eb688131a.jpg",
@@ -40,12 +40,13 @@
     "static/media/Subaru.jpg": "/shopping-cart/static/media/Subaru.7b0478fe0253237102fe.jpg",
     "static/media/Dodge.jpg": "/shopping-cart/static/media/Dodge.4d92d735cd1b70cb0acf.jpg",
     "static/media/Helvetica Neue 97 Black Condensed.otf": "/shopping-cart/static/media/Helvetica Neue 97 Black Condensed.e72c80a2ce99000a7c1b.otf",
+    "static/media/stripes.png": "/shopping-cart/static/media/stripes.b43e7ccc3c07bb507e67.png",
     "index.html": "/shopping-cart/index.html",
-    "main.56522912.css.map": "/shopping-cart/static/css/main.56522912.css.map",
-    "main.e4799e13.js.map": "/shopping-cart/static/js/main.e4799e13.js.map"
+    "main.05d0fa2e.css.map": "/shopping-cart/static/css/main.05d0fa2e.css.map",
+    "main.eb4f3a39.js.map": "/shopping-cart/static/js/main.eb4f3a39.js.map"
   },
   "entrypoints": [
-    "static/css/main.56522912.css",
-    "static/js/main.e4799e13.js"
+    "static/css/main.05d0fa2e.css",
+    "static/js/main.eb4f3a39.js"
   ]
 }
