@@ -8,10 +8,6 @@
     margin: 0;
 }
 
-/* body {
-    background-color: black;
-} */
-
 nav {
     color: white;
     background-color: navy;
@@ -21,7 +17,7 @@ nav {
     align-items: center;
     position: relative;
     font-family: Helvetica-Neue;
-    height: fit-content;
+    height: 90.8px;
 }
 
 .nav-name {
@@ -30,13 +26,18 @@ nav {
     gap: 1rem;
     align-items: center;
     position: relative;
+    height: 100%;
 }
 
-#logo {
-    color: red;
-    font-size: 162px;
-    position: absolute;
-    left: -100px;
+.navlogo {
+    height: 100%;
+    width: 150px;
+}
+
+.navlogo-container {
+    height: 100%;
+    width: 125px;
+    display: block;
 }
 
 ul {

@@ -2,6 +2,7 @@ import "../Styles/Navbar.css";
 import { NavLink } from "react-router-dom";
 import Cart from "./Cart";
 import { useEffect, useRef, useState } from "react";
+import Stripes from "../Assets/Icons/stripes.png"
 
 const Navbar = (props) => {
   // Hook useRef to target div.modal of the Navbar component, which we can then toggle the display using the displayCart method
@@ -39,7 +40,9 @@ const Navbar = (props) => {
   return (
     <nav>
       <div className="nav-name">
-        <h1 id="logo">//</h1>
+        <div className="navlogo-container">
+          <img src={Stripes} alt="Logo" className="navlogo" />
+        </div>
         <h1><i>TURISMO DEALERSHIP</i></h1>
       </div>
       <ul>
